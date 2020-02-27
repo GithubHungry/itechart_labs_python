@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ person.name }}</title>
+</head>
+<body>
+<h1>{{ person.name }}</h1>
+<h1>{{ person.phone }}</h1>
+<h1>{{ person.address }}</h1>
+<h1>{{ person.reg_date }}</h1>
+<p>    <strong>{{ method }}</strong>    </p>
+{% if error_message %}
+    <p>
+        <strong>{{ error_message }}</strong>
+    </p>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone catalog</title>
+</head>
+<body>
+<h1>Available Phones in catalog</h1>
+{% if message %}
+    <p><strong>{{ message }}</strong></p>
+{% endif %}
+{% if latest_phones %}
+    <ul>
+        {% for phone in latest_phones %}
+            <li>
+                <a href="/PhoneCatalog/{{ phone.id }}/">
+                    {{ phone.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No phones are available right now.</p>
+{% endif %}
+</body>
+</html>
